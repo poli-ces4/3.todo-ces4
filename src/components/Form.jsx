@@ -1,4 +1,5 @@
 import uuid4 from 'uuid4';
+import styles from './Form.module.css';
 const Form = ({ inputTodo, setInputTodo, todos, setTodos }) => {
 	const handlerInput = ({ target }) => {
 		setInputTodo(target.value);
@@ -21,8 +22,11 @@ const Form = ({ inputTodo, setInputTodo, todos, setTodos }) => {
 				name='task'
 				value={inputTodo}
 				onChange={handlerInput}
+				className={styles.taskInput}
 			/>
-			<button type='submit'>Add</button>
+			<button type='submit' className={styles.button}>
+				Add
+			</button>
 		</form>
 	);
 };
