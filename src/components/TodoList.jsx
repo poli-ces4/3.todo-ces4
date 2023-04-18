@@ -1,6 +1,12 @@
-import styles from './TodoList.module.css';
-const TodoList = () => {
-	return <div>TodoList</div>;
+import TodoItem from './TodoItem';
+const TodoList = ({ todos }) => {
+	return (
+		<div>
+			{todos.map(todo => (
+				<TodoItem key={todo.id} todo={todo} />
+			))}
+		</div>
+	);
 };
 
 export default TodoList;
