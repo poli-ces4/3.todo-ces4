@@ -22,7 +22,7 @@ const App = () => {
 					/>
 				</div>
 				<div>
-					<TodoList todos={todos} />
+					<TodoList todos={todos} setTodos={setTodos} />
 				</div>
 			</div>
 		</div>
