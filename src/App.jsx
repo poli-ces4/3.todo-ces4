@@ -7,6 +7,7 @@ import TodoList from './components/TodoList';
 const App = () => {
 	const [inputTodo, setInputTodo] = useState('');
 	const [todos, setTodos] = useState([]);
+	const [edit, setEdit] = useState(null);
 	return (
 		<div className={styles.container}>
 			<div className={styles.appwrapper}>
@@ -19,10 +20,12 @@ const App = () => {
 						setInputTodo={setInputTodo}
 						todos={todos}
 						setTodos={setTodos}
+						edit={edit}
+						setEdit={setEdit}
 					/>
 				</div>
 				<div>
-					<TodoList todos={todos} setTodos={setTodos} />
+					<TodoList todos={todos} setTodos={setTodos} setEdit={setEdit} />
 				</div>
 			</div>
 		</div>
